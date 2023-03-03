@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')#Es carpeta raiz
+@app.route('/Cuenta/Home')#Es carpeta raiz
 
 def index():
     titulos = ['Home', 'Registro', 'Inicio Sesion']
