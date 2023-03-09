@@ -1,23 +1,27 @@
-
-   
-    body{
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        background-size: cover;
-        background-attachment: fixed;
-    }
+*{
+    margin: 0px;
+    border: 0px;
     
-    #form-container{
-        background-color: rgb(255, 255, 255);
-        width: 600px;
-        height: 710px;
-        border-radius: 5%;
-        border: 2px grey solid;
-        margin: auto;
-        margin-top: 25px;
-        margin-bottom: 50px;
-        overflow: hidden;
-    }
+}
+   
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+    
+#form-container{
+    background-color: rgb(255, 255, 255);
+    width: 600px;
+    height: 710px;
+    border-radius: 5%;
+    border: 2px grey solid;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
 
 #title-container{
     display: flex;
@@ -28,10 +32,11 @@
     border-bottom: 2px grey solid;
 }
 #title-arrow{
-    margin-top: 30px;
+    margin-top: 23px;
     margin-right: 2.5px;
 }
 #title-title{
+    margin-top: 15px;
     margin-left: 2.5px;
 }
 
@@ -45,7 +50,7 @@
 form .txt_field{
     position: relative;
     margin-bottom: 20px;
-    border-bottom: 5px grey solid;
+    border-bottom: 3px solid grey;
 }
 
 .txt_field input, select{
@@ -66,6 +71,11 @@ select{
 	-moz-appearance: none;
     width: 200px;
     height: 50px;
+    background-color: red;
+}
+
+#date{
+    background-color: red;
 }
 
 option{
@@ -74,7 +84,7 @@ option{
 
 .txt_field label{
     position: absolute;
-    color: rgba(0, 0, 0, 0.555);
+    color: rgba(0, 0, 0, 0.637);
     transform: translateY(-50%);
     font-size: 16px;
     pointer-events: none;
@@ -125,12 +135,31 @@ option{
     color: #2691d9;
 }
 
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    margin: 0px;
+    border: 0px;
+    top: 57px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #2691d9;
+    transition: .4s;
+}
+
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
     top: -4px;
     left: 0px;
     color: #2691d9;
 }
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
 
 #footer-container #checkbox{
     margin-left: 20px;
@@ -154,6 +183,87 @@ option{
     outline: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#checkbox{
+    display: none;
+}
+
+#checkLabel{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-size: 0px;
+    background-color: rgb(255, 0, 0);
+}
+
+#checkLabel:before{
+    position: relative;
+    content: "";
+    width: 10px;
+    height: 10px;
+    margin-left: 43px;
+    right: 3px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5%;
+    border: 1px rgb(82, 149, 177) solid;
+    transition: .2s;
+}
+
+
+
+#checkbox-title{
+    justify-content: center;
+    font-size: 15px;
+}
+
+.checkbox-terms span{
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    left: 1.5px;
+    top: 4px;
+    margin-left: 43px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5%;
+    border: 1px rgb(82, 149, 177) solid;
+    transition: .2s;
+}
+
+.checkbox-terms span::after{
+    content: "";
+    display:inline-block;
+    position: relative;
+    bottom: 7px;
+    left: 2.5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0%;
+    transition: .4s;
+}
+
+
+.checkbox-terms span:hover{
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+.checkbox-terms input:checked ~ span{
+    background-color: rgb(82, 149, 177);
+}
+
+.checkbox-terms input:checked ~ span::after{
+    background-color: white;
+    opacity: 100%;
+}
+
+.checkbox-terms input{
+    display: none;
 }
 
 #login{
