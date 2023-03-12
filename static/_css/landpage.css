@@ -1,441 +1,164 @@
-:root {
-
-	--rojo: #E50914;
-	background-image: url(img/header.png);
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'M PLUS 2', sans-serif;
+    font-weight: bold;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+body{
+    overflow-y:visible;
 }
 
-body {
-	background-image: url(img/header.png);
-	font-family: 'Open Sans', sans-serif;
+.bglogo{
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    width: 150px;
+    height: 150px;
+    background-color: #D9D9D9;
+    border: 0px solid #000000;
 }
 
-.contenedor {
-	width: 90%;
-	margin: auto;
+img{
+    width: 150px;
+    height: 150px;
 }
 
-header {
-	
-	padding: 30px 0;
+.nav-bar{
+    position: fixed;
+    width: 1100px;
+    height: 100px;
+    top: 65px;
+    left: 220px;
+    background: #D9D9D9;
+    border: 0px solid #000000;
 }
 
-header .contenedor {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+#search-container{
+    display: inline-block;
+    margin-top: -15px;
+    margin-left: 130px;
+    width: 950px;
+    height: 70px;
 }
 
-header .logotipo {
-	font-family: 'Bebas Neue', cursive;
-	font-weight: normal;
-	color: var(--rojo);
-	font-size: 40px;
+#search-bar{
+    border: 0px transparent;
+    position: relative;
+    border-left: white 5px solid;
+    height: 100%;
+    width: 75%;
+    font-size: 20px;
+    top: 7px;
 }
 
-header nav a {
-	
-	color: #030303;
-	text-decoration: none;
-	margin-right: 20px;
+.search{
+    position: relative;
+    top: 40px;
+    left: 25px;
 }
 
-header nav a:hover,
-header nav a.activo {
-	color: #1866da;
+#container-login{
+    border: 0px transparent;
+    position: relative;
+    margin-left: 735px;
+    bottom: 78px;
+    background-color: rgb(104, 118, 124);
+    width: 235px;
+    height: 100px;
+    transition: 0.1s;
 }
 
-
-.pelicula-principal {
-	font-size: 16px;
-	min-height: 40.62em;
-	color: #fff;
-	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/backdrop.jpg);
-	background-position: center center;
-	background-size: cover;
-	margin-bottom: 3.12em;
-	display: flex;
-	align-items: end;
+#container-login:hover{
+    background-color:#2691d9;
 }
 
-.pelicula-principal .contenedor {
-	margin: 0 auto;
-	margin-bottom: 6.25em;
+#login{
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    top: 25px;
+    left: 23px;
+    outline: none;
 }
 
-.pelicula-principal .titulo {
-	font-weight: 600;
-	font-size: 3.12em;
-	margin-bottom: 0.4em;
+.person{
+    position: relative;
+    width: 100px;
+    height: 150px;
+    left: 200px;
+    background-color: rgba(185, 185, 185, 0.8);
 }
 
-.pelicula-principal .descripcion {
-	font-weight: normal;
-	font-size: 1em;
-	line-height: 1.75em;
-	max-width: 50%;
-	margin-bottom: 1.25em;
+.material-symbols-outlined{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 1000;
 }
 
-.pelicula-principal .boton {
-	background: rgba(0,0,0, 0.5);
-	border: none;
-	border-radius: 0.31em;
-	padding: 0.93em 1.87em;
-	color: #fdffff;
-	margin-right: 1.25em;
-	cursor: pointer;
-	transition: .3s ease all;
-	font-size: 1.12em;
+#container-popular{
+    position: relative;
+    background-color: #16A6E4;
+    margin-left: 40px;
+    margin-top: 200px;
+    width: 1280px;
+    height: 400px;
 }
 
-.pelicula-principal .boton:hover {
-	background: #c5c5c5;
-	color: #000;
+#img-pop{
+    position: relative;
+    bottom: 400px;
+}
+#img-pop img{
+    width: 1280px;
+    height: 400px;
 }
 
-.pelicula-principal .boton i {
-	margin-right: 1.25em;
+#container-descrippop{
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 480px;
+    height: 400px;
 }
 
-/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
-.contenedor-titulo-controles {
-	display: flex;
-	justify-content: space-between;
-	align-items: end;
+#small-info{
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    text-align: center;
+    left: 10px;
+    right: 10px;
+    width: 460px;
 }
 
-.contenedor-titulo-controles h3 {
-	color: #463d3d;
-	font-size: 30px;
+#small-info h3, #small-info p{
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    padding: 10px;
 }
 
-.contenedor-titulo-controles .indicadores button {
-	background: #494444;
-	height: 3px;
-	width: 10px;
-	cursor: pointer;
-	border: none;
-	margin-right: 2px;
+#small-info p{
+    font-weight:200;
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(255, 255, 255);
 }
 
-.contenedor-titulo-controles .indicadores button:hover,
-.contenedor-titulo-controles .indicadores button.activo {
-	background: rgb(0, 68, 255);
+#complete-info{
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 440px;
+    height: 105px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
 }
 
-
-/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
-.peliculas-recomendadas {
-	margin-bottom: 70px;
-}
-
-.peliculas-recomendadas .contenedor-principal {
-	display: flex;
-	align-items: center;
-	position: relative;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
-	position: absolute;
-	border: none;
-	background: rgba(0,0,0,0.3);
-	font-size: 40px;
-	height: 50%;
-	top: calc(50% - 25%);
-	line-height: 40px;
-	width: 50px;
-	color: #fff;
-	cursor: pointer;
-	z-index: 500;
-	transition: .2s ease all;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
-.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
-	background: rgba(0,0,0, .9);
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-izquierda {
-	left: 0;
-}
-
-.peliculas-recomendadas .contenedor-principal .flecha-derecha {
-	right: 0;
-}
-
-/* ---- ----- ----- Carousel ----- ----- ----- */
-.peliculas-recomendadas .contenedor-carousel {
-	width: 100%;
-	padding: 20px 0;
-	overflow: hidden;
-	scroll-behavior: smooth;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel {
-	display: flex;
-	flex-wrap: nowrap;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula {
-	min-width: 20%;
-	transition: .3s ease all;
-	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover {
-	transform: scale(1.2);
-	transform-origin: center;
-}
-
-.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img {
-	width: 100%;
-	vertical-align: top;
-}
-
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-	header .logotipo {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.pelicula-principal {
-		font-size: 14px;
-	}
-
-	.pelicula-principal .descripcion {
-		max-width: 100%;
-	}
-
-	.peliculas-recomendadas .contenedor-carousel {
-		overflow: visible;
-	}
-
-	.peliculas-recomendadas .contenedor-carousel .carousel {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-	}
-
-	.peliculas-recomendadas .indicadores,
-	.peliculas-recomendadas .flecha-izquierda,
-	.peliculas-recomendadas .flecha-derecha {
-		display: none;
-	}
-}
-.buton{
-    border: 1px solid #1058dd; 
-    padding: 10px; 
-    background-color: #1a5bd3; 
-    color: #ffffff; 
-    text-decoration: none; 
-    text-transform: uppercase; 
-    font-family: 'Helvetica', sans-serif; 
-    border-radius: 50px; 
-}
-#form {
-	position: relative;
-	text-align: center;
-	width: 250px;
-	margin: 0 auto;
-	height: 50px;
-	width: 50px;
-	height: 50px;
-	
-  }
-  
-#form p {
-	
-	position: relative;
-	margin: 0 auto;
-	width: 50px;
-	height: 50px;
-	
-	
-  }
-  
-#form label {
-	font-size: 20px;
-	margin: 0 auto;
-	width: 50px;
-	height: 50px;
-	
-	
-  }
-  
-input[type="radio"] {
-	display: none;
-  }
-  
-label {
-	color: rgb(209, 158, 48);
-	margin: 0 auto;
-  }
-  
-.clasificacion1{
-	
-	direction: rtl;
-	unicode-bidi: bidi-override;
-	margin: 0 auto;
-	width: 200px;
-  }
-  
-label:hover {
-	color: orange;
-	margin: 0 auto;
-  }
-  
-input[type="radio"]:checked ~ label {
-	color: orange;
-	margin: 0 auto;
-  }
-.galeria{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.galeria h1{
-	text-align: center;
-	margin: 20px 0 15px 0;
-	font-weight: 300;
-}
-
-.linea{
-	border-top: 5px solid rgb(18, 78, 190);
-	margin-bottom: 40px;
-}
-
-.contenedor-imagenes{
-	display: flex;
-	width: 85%;
-	margin: auto;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	border-radius: 3px;
-}
-
-.contenedor-imagenes .imagen{
-	width: 32%;
-	position: relative;
-	height: 250px;
-	margin-bottom: 5px;
-	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75) ;
-}
-.imagen img{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-
-}
-
-.overlay{
- position: absolute;
- bottom: 0;
- left: 0;
- background: #3a4272;
- width: 100%;
- height: 0;
- overflow: hidden;
- transition: .5s ease;
-
-}
-
-.overlay h2{
-	color: #ffffff;
-	font-size: 16px;
-	bottom: 50px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	text-align: left;
-	transform: translate(-50%, -50%);
-}
-
-.overlay p{
-	color: #ffffff;
-	font-size: 10px;
-	position: relative;
-	top: 50%;
-	left: 50%;
-	text-align: left ;
-	transform: translate(-50%, -50%);
-}
-
-.imagen:hover .overlay{
-	height:100%;
-	cursor: pointer;
-
-}
-
-@media screen and (max-width:1000px){
-	.contenedor-imagenes{
-		width: 95%;
-	}
-}
-
-@media screen and (max-width:450px){
-	.contenedor-imagenes{
-		width: 80%;
-	}
-}
-
-
-.botoon {
-	
-	background: rgba(0,0,0, 0.5);
-	border: none;
-	border-radius: 0.31em;
-	padding: 0.93em 1.87em;
-	color: #fdffff;
-	margin-right: 1.25em;
-	cursor: pointer;
-	transition: .3s ease all;
-	font-size: 1;
-	top: 20px;
-}
-
-.botoon:hover {
-	background: #c5c5c5;
-	color: #000;
-	top: 20px;
-}
-
-.botoon i {
-	margin-right: 1.25em;
-	top: 20px;
-}
-.botin {
-	
-	background: rgba(0,0,0, 0.5);
-	border: none;
-	border-radius: 0.31em;
-	padding: 0.93em 1.87em;
-	color: #fdffff;
-	margin-right: 1.25em;
-	cursor: pointer;
-	transition: .3s ease all;
-	font-size: 1;
-	top: 20px;
-}
-
-.botin:hover {
-	background: #c5c5c5;
-	color: #000;
-	top: 20px;
-}
-
-.botin i {
-	margin-right: 1.25em;
-	top: 20px;
+#complete-info div{
+    margin-top: 15px;
+    font-size: 25px;
+    text-align: center;
 }

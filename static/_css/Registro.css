@@ -185,85 +185,76 @@ option{
     cursor: pointer;
 }
 
-#checkbox{
-    display: none;
-}
 
-#checkLabel{
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-    font-size: 0px;
-    background-color: rgb(255, 0, 0);
-}
-
-#checkLabel:before{
-    position: relative;
-    content: "";
-    width: 10px;
-    height: 10px;
-    margin-left: 43px;
-    right: 3px;
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+   }
+   
+.container {
     display: inline-block;
-    background-color: white;
-    border-radius: 5%;
-    border: 1px rgb(82, 149, 177) solid;
-    transition: .2s;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-radius: 5px;
 }
+   
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 75px;
+    height: 12px;
+    width: 12px;
+    background-color: #ccc;
+    border-radius: 5%;
+}
+   
+.container input:checked ~ .checkmark {
+    box-shadow: 1px 1px 0px rgb(183, 183, 183);
+    transition: all 0.2s;
+    opacity: 1;
+    background-image: linear-gradient(45deg, rgb(14, 124, 171) 0%, #16A6E4 100%);
+}
+   
+.container input ~ .checkmark {
+    transition: all 0.2s;
+    opacity: 1;
+    box-shadow: 0.5px 0.5px 0px rgb(183, 183, 183);
+}
+   
 
+.checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s;
+}
+   
 
+.container input:checked ~ .checkmark:after {
+    opacity: 1;
+    transition: all 0.2s;
+}
+   
+
+.container .checkmark:after {
+    left: 4px;
+    top: 2.2px;
+    width: 2.5px;
+    height: 4.5px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+}
 
 #checkbox-title{
-    justify-content: center;
-    font-size: 15px;
-}
-
-.checkbox-terms span{
-    position: relative;
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    left: 1.5px;
-    top: 4px;
-    margin-left: 43px;
-    display: inline-block;
-    background-color: white;
-    border-radius: 5%;
-    border: 1px rgb(82, 149, 177) solid;
-    transition: .2s;
-}
-
-.checkbox-terms span::after{
-    content: "";
-    display:inline-block;
-    position: relative;
-    bottom: 7px;
-    left: 2.5px;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    opacity: 0%;
-    transition: .4s;
-}
-
-
-.checkbox-terms span:hover{
-    background-color: rgb(185, 185, 185);
-    cursor: pointer;
-}
-
-.checkbox-terms input:checked ~ span{
-    background-color: rgb(82, 149, 177);
-}
-
-.checkbox-terms input:checked ~ span::after{
-    background-color: white;
-    opacity: 100%;
-}
-
-.checkbox-terms input{
-    display: none;
+    font-size: 13px;
 }
 
 #login{

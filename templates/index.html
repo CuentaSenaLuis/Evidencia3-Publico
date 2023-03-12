@@ -1,517 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="{{ url_for('static', filename='./_css/landpage.css') }}">
-	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
-	<title>Hotelia - Inicio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotelia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./_css/landpage.css') }}">
+    
 </head>
 <body>
-	<header>
-		<div class="contenedor">
-			<h2 class="logotipo"> <img src="img/title.png" alt=""> </h2>
-			<nav>
-				<a href="#" class="activo">Inicio</a>
-				<a href="#">Hoteles</a>
-				<a href="#">Categorias</a>
-				<a href="#">Más Recientes</a>
-				<a href="#"  class="buton"> <img src="img/we.png" alt=""> </a>
-			</nav>
-		</div>
-	</header>
+    <div>
+        <div class="bglogo">
+            <p class="img"><img src="../static/Hotelia.png"></p>
+        </div>
+        <div class="nav-bar">
+            <p class="search">BUSQUEDA</p>
+            <div id="search-container">
+                <input type="text" name="search" id="search-bar">
+                <div id="container-login">
+                    <a href="/Cuenta/Login" id="login">Iniciar Sesion</a>
+                </div>
+            </div>
+            <!--
+            <div class="person">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </div>
+            -->
+        </div>
+        <div id="container-popular">
+            <div id="container-descrippop">
+                <div id="small-info">
+                    <h3>Nombre Hotel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit nullam nunc est urna sociis ante commodo sagittis morbi convallis, 
+                        habitasse litora gravida luctus et facilisis platea fusce eros fermentum cum purus nisl aenean accumsan. Torquent ornare 
+                        lacus dignissim dis sapien mus a lacinia parturient, ridiculus praesent senectus phasellus mauris tempor enim.</p>
+                        <!--50 palabras maximo-->
+                </div>
+                <div id="complete-info">
+                    <div>
+                        <h4>Cantidad Estrellas</h4>
+                    </div>
+                    <div>
+                        <h4>Recomendados Positivos</h4>
+                    </div>
+                </div>
+            </div>
+            <p id="img-pop"><img src="../static/1.jpg" alt="ref"></p>
+        </div>
 
-	<main>
-		<div class="pelicula-principal">
-			<div class="contenedor">
-				<h3 class="titulo">Hotel Cascada Pendeja</h3>
-				<p class="descripcion">
-					El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-					<form>
-						<p class="clasificacion">
-						  <input id="radio1" type="radio" name="estrellas" value="5">
-						  <label for="radio1">★</label>
-						  <input id="radio2" type="radio" name="estrellas" value="4">
-						  <label for="radio2">★</label>
-						  <input id="radio3" type="radio" name="estrellas" value="3">
-						  <label for="radio3">★</label>
-						  <input id="radio4" type="radio" name="estrellas" value="2">
-						  <label for="radio4">★</label>
-						  <input id="radio5" type="radio" name="estrellas" value="1">
-						  <label for="radio5">★</label>
-						</p>
-					  </form>
-				</p>
-				<br>
-				<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p><button role="button" class="boton">Reservar</button>
-				<button role="button" class="boton"><i class="fas fa-info-circle"></i>Más información</button>
-			</div>
-		</div>
-
-		<div class="peliculas-recomendadas contenedor">
-			<div class="contenedor-titulo-controles">
-				<h3>Hoteles Recomendados:</h3>
-				<div class="indicadores"></div>
-			</div>
-
-			<div class="contenedor-principal">
-				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
-
-				<div class="contenedor-carousel">
-					<div class="carousel">
-						<div class="pelicula">
-							<a href="#"><img src="img/1.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/4.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/5.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/6.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/7.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/1.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/1.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/4.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/5.jpg" alt=""></a>
-						</div>
-							<div class="pelicula">
-							<a href="#"><img src="img/6.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/7.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/1.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/2.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/3.jpg" alt=""></a>
-						</div>
-						<div class="pelicula">
-							<a href="#"><img src="img/4.jpg" alt=""></a>
-						</div>
-					</div>
-				</div>
-
-				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
-			</div>
-		</div>
-	</main>
-	<div class="galeria" >
-		<h1>Los Mejores Hoteles </h1>
-		<div class="linea" ></div>
-		<div class="contenedor-imagenes" >
-                <div class="imagen" >
-					<img src="img/1.jpg" alt="">
-					<div class="overlay" > 
-                               <h2>Hotel cascada Masca</h2>
-							   <br>
-							   <br>
-							   <br>
-							   <br>
-							   <br>
-							   
-							   <p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-								<form>
-									<p class="clasificacion1">
-									  <input id="radio1" type="radio" name="estrellas" value="5">
-									  <label for="radio1">★</label>
-									  <input id="radio2" type="radio" name="estrellas" value="4">
-									  <label for="radio2">★</label>
-									  <input id="radio3" type="radio" name="estrellas" value="3">
-									  <label for="radio3">★</label>
-									  <input id="radio4" type="radio" name="estrellas" value="2">
-									  <label for="radio4">★</label>
-									 
-									</p>
-								  </form>
-							   </p>
-							   <p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-							   <button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-					</div>
-				</div>
-				<div class="imagen" >
-					<img src="img/2.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-							
-							<form>
-							
-							<p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						
-						</p>
-
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/3.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/4.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/5.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/6.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-
-				<div class="imagen" >
-					<img src="img/7.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-
-				 <div class="imagen" >
-					<img src="img/8.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/1.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/1.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div> 
-				<div class="imagen" >
-					<img src="img/1.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-				<div class="imagen" >
-					<img src="img/1.jpg" alt="">
-					<div class="overlay" > 
-						<h2>Hotel cascada Masca</h2>
-						<br>
-						<br>
-						<br>
-						<br>
-						<br>
-						
-						<p>El Panoramic Hotel es un moderno y elegante hotel de 4 estrellas, asomado al mar, ideal para unas vacaciones románticas y de gran encanto, en el mágico escenario de Taormina y del Mar de Sicilia.
-						 <form>
-							 <p class="clasificacion1">
-							   <input id="radio1" type="radio" name="estrellas" value="5">
-							   <label for="radio1">★</label>
-							   <input id="radio2" type="radio" name="estrellas" value="4">
-							   <label for="radio2">★</label>
-							   <input id="radio3" type="radio" name="estrellas" value="3">
-							   <label for="radio3">★</label>
-							   <input id="radio4" type="radio" name="estrellas" value="2">
-							   <label for="radio4">★</label>
-							   <input id="radio5" type="radio" name="estrellas" value="1">
-							   <label for="radio5">★</label>
-							 </p>
-						   </form>
-						</p>
-						<p>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</p> <button role="button" class="botoon">Reservar</button>
-						<button role="button" class="botin"><i class="fas fa-info-circle"></i>Más información</button>
-			 
-			 </div>
-				</div>
-
-		</div>
-
-	</div>
-	
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
 </body>
 </html>
