@@ -10,13 +10,13 @@ body{
 }
 
 .bglogo{
-    position: fixed;
+    position: absolute;
     top: 40px;
     left: 40px;
     width: 150px;
     height: 150px;
     background-color: #D9D9D9;
-    border: 0px solid #000000;
+    border: 1px solid #000000;
 }
 
 img{
@@ -25,18 +25,18 @@ img{
 }
 
 .nav-bar{
-    position: fixed;
-    width: 1100px;
+    position: absolute;
+    width: 865px;
     height: 100px;
     top: 65px;
     left: 220px;
     background: #D9D9D9;
-    border: 0px solid #000000;
+    border: 1px solid #000000;
 }
 
 #search-container{
     display: inline-block;
-    margin-top: -15px;
+    margin-top: -16px;
     margin-left: 130px;
     width: 950px;
     height: 70px;
@@ -59,10 +59,7 @@ img{
 }
 
 #container-login{
-    border: 0px transparent;
     position: relative;
-    margin-left: 735px;
-    bottom: 78px;
     background-color: rgb(104, 118, 124);
     width: 235px;
     height: 100px;
@@ -75,7 +72,6 @@ img{
 
 #login{
     position: relative;
-    display: inline-block;
     font-size: 30px;
     text-decoration: none;
     color: white;
