@@ -4,6 +4,7 @@
     font-family: 'M PLUS 2', sans-serif;
     font-weight: bold;
     background-attachment: fixed;
+    box-sizing: border-box;
 }
 body{
     overflow:visible;
