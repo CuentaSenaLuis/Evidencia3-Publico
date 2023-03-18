@@ -1,18 +1,25 @@
 *{
     margin: 0px;
     border: 0px;
-    
+    box-sizing: border-box;
 }
    
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background-size: cover;
-    background-attachment: fixed;
 }
-    
+
+h1{
+    padding: 10px;
+}
+
+p{
+    position: relative;
+    top: 40px;
+    text-align: center;
+}
+
 #form-container{
-    background-color: rgb(255, 255, 255);
     width: 600px;
     height: 710px;
     border-radius: 5%;
@@ -23,28 +30,23 @@ body{
     overflow: hidden;
 }
 
-#title-container{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    position: relative;
+.title-container{
+    text-align: center;
     margin-bottom: 20px;
     border-bottom: 2px grey solid;
 }
-#title-arrow{
-    margin-top: 23px;
-    margin-right: 2.5px;
-}
-#title-title{
-    margin-top: 15px;
-    margin-left: 2.5px;
+.material-symbols-outlined{
+    font-size: 30px;
+    position: absolute;
+    top: 6.5%;
+    left: 29.5%;
+    color: #16A6E4;
+    font-weight: 900;
 }
 
 .row{
     display: flex;
-    justify-content: space-between;
-    margin-right: 35px;
-    margin-left: 35px;
+    justify-content: space-evenly;
 }
 
 form .txt_field{
@@ -56,12 +58,9 @@ form .txt_field{
 .txt_field input, select{
     width: 200px;
     height: 50px;
-    padding-left: 0px;
-    margin-top: 5px;
-    font-size: 16px;
-    border: none;
-    outline: none;
+    margin-top: 7px;
     border-radius: 10px;
+    outline: none;
     cursor: pointer;
 }
 
@@ -78,31 +77,15 @@ select{
     background-color: red;
 }
 
-option{
-    border: 0px transparent;
-}
-
 .txt_field label{
     position: absolute;
     color: rgba(0, 0, 0, 0.637);
     transform: translateY(-50%);
     font-size: 16px;
-    pointer-events: none;
-    transition: .2s;
-}
-
-.tlabel{
     top: 55%;
     left: 0px;
-}
-
-.olabel{
-    top: 30px;
-    left: 0px;
-}
-
-#genlabel{
-    left: 0px;
+    pointer-events: none;
+    transition: .2s;
 }
 
 #date::-webkit-calendar-picker-indicator{
@@ -128,11 +111,11 @@ option{
 .barBottom{
     position: absolute;
     float: left;
-    background-color: #2691d9;
+    background-color: #16A6E4;
     margin-top: 50px;
     margin-right: 5000px;
     width: 200px;
-    color: #2691d9;
+    color: #16A6E4;
 }
 
 .txt_field span::before{
@@ -144,15 +127,14 @@ option{
     left: 0;
     width: 0%;
     height: 3px;
-    background: #2691d9;
+    background: #16A6E4;
     transition: .4s;
 }
 
 .txt_field input:focus ~ label,
 .txt_field input:valid ~ label{
-    top: -4px;
-    left: 0px;
-    color: #2691d9;
+    top: 5px;
+    color: #16A6E4;
 }
 
 .txt_field input:focus ~ span::before,
@@ -160,31 +142,17 @@ option{
     width: 100%;
 }
 
-
-#footer-container #checkbox{
-    margin-left: 20px;
-
-}
-
-#footer-container #checkbox:checked{
-    margin-left: 20px;
-    padding: 100px;
-    background-color: black;
-}
-
 #footer-container #submit{
-    width: 200px;
+    position: relative;
+    width: 33%;
     height: 50px;
-    margin-left: 190px;
-    margin-top: 5px;
+    top: 20px;
+    left: 190px;
     font-size: 16px;
-    border: none;
-    background: rgb(82, 149, 177);
-    outline: none;
+    background: #16A6E4;
     border-radius: 10px;
     cursor: pointer;
 }
-
 
 .container input {
     position: absolute;
@@ -193,7 +161,7 @@ option{
     height: 0;
     width: 0;
     border-radius: 5px;
-   }
+}
    
 .container {
     display: inline-block;
@@ -257,6 +225,9 @@ option{
     font-size: 13px;
 }
 
-#login{
-    margin-left: 170px;
+.link{
+    padding-left: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #16A6E4;
 }

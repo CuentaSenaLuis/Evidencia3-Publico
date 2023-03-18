@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingresar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='./_css/Login.css') }}">
 </head>
 <body>
@@ -21,13 +22,11 @@
                 <input type="text" required>
                 <!--pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"-->
                 <!--no me deja ponerle requerimientos de @ y cuando lo pongo tipo email no toma el efecto del label-->
-                <span></span>
                 <label>Correo Electrónico</label>
             </div>
             <div class="txt_field">
                 <i class="fas fa-key icon" id="icon"></i>
                 <input type="password" required>
-                <span></span>
                 <label>Contraseña</label>
             </div>
             <button type="submit">Ingresar</button>
