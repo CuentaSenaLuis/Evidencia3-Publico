@@ -3,133 +3,148 @@
     padding: 0px;
     font-family: 'M PLUS 2', sans-serif;
     font-weight: bold;
+    background-attachment: fixed;
 }
-
 body{
-    overflow-y:visible;
-    display: flex;
-    justify-content: space-around;
+    overflow:visible;
 }
 
-.bglogo{
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    width: 150px;
-    height: 150px;
-    background-color: #D9D9D9;
-    border: 1px solid #000000;
-}
-
-img{
-    width: 150px;
-    height: 150px;
-}
-
-.nav-bar{
-    position: absolute;
-    width: 73vw;
-    height: 100px;
-    top: 65px;
-    left: 220px;
-    background: #D9D9D9;
-    border: 1px solid #000000;
-}
-
-#search-container{
-    display: inline-block;
-    margin-top: -15px;
-    margin-left: 130px;
-    width: 950px;
-    height: 70px;
-}
-
-#search-bar{
-    border: 0px transparent;
-    position: relative;
-    border-left: white 5px solid;
-    height: 100%;
-    width: 75%;
-    font-size: 20px;
-    top: 7px;
-}
-
-.search{
-    position: relative;
-    top: 40px;
-    left: 25px;
-}
-
-#container-login:hover{
-    background-color:#2691d9;
-}
-
-
-
-#login{
-    position: relative;
-    display: inline-block;
-    font-size: 30px;
-    text-decoration: none;
-    color: white;
-    top: 25px;
-    left: 23px;
-    outline: none;
-}
-
-.person{
-    position: relative;
-    width: 100px;
-    height: 150px;
-    left: 200px;
-    background-color: rgba(185, 185, 185, 0.8);
-}
-
-.login{
-    position: absolute;
-    margin-right: 20px;
-    top: 65px;
-    width: 120px;
-    height: 100px;
-    background: #D9D9D9;
-    border: 1px solid #000000;
+.container-father{
     
 }
 
-.material-symbols-outlined{
-    position: absolute;
-    font-size: 30px;
-    font-weight: 1000;
-    color: #000000;
+
+/* -------------------------Barra de navegacion------------------------ */
+/* Flex Navegacion */
+.nav{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Logo */
+.bglogo{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #D9D9D9;
+    border: 1px solid #000000;
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    min-width: 105px;
+    flex-shrink: 7;
+}
+.bglogo img{
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+}
+/* Barra Busqueda */
+.nav-bar{
+    flex-shrink: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-grow: 2;
+    background: #D9D9D9;
+    border: 1px solid #000000;
+    padding-right: 10px;
+    margin-right: 5px;
+    width: 80%;
+    height: 100px;
+
+}
+.search{ /* -> Texto Busqueda */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 35px;
+}
+#search-bar{ /* -> Input Navegacion */
+    
+    position: relative;
+    border: 0px transparent;
+    border-left: white 5px solid;
+    font-size: 20px;
+    width: 100%;
+    height: 80%;
+    top: 10px;
 }
 
 
+
+.login{/* -> Container del Login */
+    flex-shrink: 6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    
+}
+/* Boton Login */
+#persona{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    padding: 10px;
+    padding-bottom: 9px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+#persona:hover{/* -> !!!!Cambiar!!!!! */
+    background-color:#D9D9D9;
+}
+
+#persona img{
+    width: 100%;
+}
+
+
+/* ------------------------FIN------------------------------- */
+
+
+
+
+/* -------------------------Carrusel Recomendados------------------------ */
 #container-popular{
     position: absolute;
     background-image: url(../img/2.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
     border-radius: 5px;
     box-shadow: 2px 2px 7px black;
     top: 200px;
     right: 20px;
     left: 20px;
-    width: 93vw;
-    height: 55vh;
     max-height: 400px;
-    min-height: 400px;
-
+    min-height: 200px;
     overflow: hidden;
 }
 
 
 #container-descrippop{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.6);
-    width: 100vw;
-    height: 100vh;
-    max-width: 480px;
-    max-height: 400px;
+    width: 40%;
+    height: 400px;
 }
 
 #small-info{
@@ -137,15 +152,13 @@ img{
     top: 20px;
     font-size: 30px;
     text-align: center;
-    left: 10px;
-    right: 10px;
-    width: 460px;
+    width: 90%;
 }
 
 #small-info h3, #small-info p{
     font-weight: bolder;
     color: rgb(255, 255, 255);
-    padding: 10px;
+    padding-top: 10px;
 }
 
 #small-info p{
@@ -156,13 +169,12 @@ img{
 }
 
 #complete-info{
-    margin-top: 50px;
-    margin-left: 20px;
-    width: 440px;
-    height: 105px;
-    background-color: white;
     display: flex;
     justify-content: space-around;
+    margin-top: 50px;
+    width: 90%;
+    height: 105px;
+    background-color: white;
 }
 
 #complete-info div{
@@ -170,18 +182,21 @@ img{
     font-size: 25px;
     text-align: center;
 }
+/* -------------------------FIN------------------------ */
 
+
+/* -------------------------Mosaico------------------------ */
 .container-pattern{
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    top: 650px;
-    left: -12px;
+    top: 550px;
+
 }
 
 .container-content{
-    width: 372px;
+    width: 27%;
     height: 303px;
     border-radius: 5px;
     box-shadow: 2px 2px 7px black;
@@ -214,15 +229,15 @@ img{
 .containerinfo-title{
     position: relative;
     display: flex;
+    flex-direction: row;
     justify-content: space-between; 
     top: 12px;
     margin-left: 20px;
-    width: 334px;
+    width: 90%;
 }
 
 .title{
     width: 160px;
-
 }
 
 .container-content h4, h3{
@@ -269,16 +284,46 @@ img{
 .container-describe{
     position: relative;
     top: 30px;
-    width: 332px;
+    width: 90%;
     margin-left: 20px;
     text-align: justify;
 }
+/* -------------------------FIN------------------------ */
 
-.container-total{
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+
+
+
+/*
+652 min navbar -> Ya no se achica bien, necesita 
+
+*/
+
+
+@media only screen and (max-width: 600px) {
+    .n {width: 30vw;}
+}
+
+@media only screen and (min-width: 600px) {
+    .n {width: 40vw;}
+}
+
+@media only screen and (min-width: 768px) {
+    .n {width: 50vw;}
+} 
+
+@media only screen and (max-width: 768px) {
+    .n {width: 50vw;}
+} 
+  
+@media only screen and (min-width: 992px) {
+    .n {width: 76vw;}
+} 
+  
+@media only screen and (min-width: 1200px) {
+    .n {width: 78vw;}
+}
+
+@media only screen and (min-width: 1300px) {
+    .n {width: 80vw; background-color: aqua;}
 }
