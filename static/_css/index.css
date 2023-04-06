@@ -1,0 +1,578 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'M PLUS 2', sans-serif;
+    font-weight: bold;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+body{
+    overflow:visible;
+}
+
+
+
+
+/* -------------------------Barra de navegacion------------------------ */
+/* Flex Navegacion */
+.nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Logo */
+.bglogo{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #D9D9D9;
+    border: 1px solid #000000;
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    min-width: 105px;
+    flex-shrink: 7;
+}
+.bglogo img{
+    width: 100%;
+    height: 100%;
+    max-width: 150px;
+    max-height: 150px;
+}
+/* Barra Busqueda */
+.nav-bar{
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+    justify-content: center;
+    background: #D9D9D9;
+    border: 1px solid #000000;
+    padding-right: 10px;
+    margin-right: 5px;
+    width: 80%;
+    height: 100px;
+
+}
+.search{ /* -> Texto Busqueda */
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.2s;
+
+}
+#search-bar{ /* -> Input Navegacion */
+
+    position: relative;
+    border: 0px transparent;
+    border-left: white 5px solid;
+    font-size: 20px;
+    width: 100%;
+    height: 80%;
+    
+    
+}
+
+/*
+.loginPersona{
+    flex-shrink: 6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    min-width: 50px;
+    min-height: 50px;
+    background: #ffffff;
+    
+}
+
+#persona{
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    padding: 10px;
+    padding-bottom: 9px;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+*/
+
+.login{/* -> Container del Login */
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin-right: 20px;
+    height: 100%;
+    min-width: 80px;
+    min-height: 50px;
+    border-radius: 5%;
+}
+
+.loginPersona, .login{
+    flex-shrink: 2;
+}
+
+#login{
+    font-size: 150%;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+#persona:hover, .login:hover{
+    background-color:#D9D9D9;
+}
+
+#persona img{
+    width: 100%;
+}
+
+
+/* ------------------------FIN------------------------------- */
+
+
+
+
+/* -------------------------Carrusel Recomendados------------------------ */
+#container-popular{
+    background-image: url("../img/backdrop.jpg");
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px black;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    max-height: 400px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+#container-popular img{
+    position: absolute;
+    z-index: -2;
+    width: 1200px;
+    height: 400px;
+}
+
+#container-descrippop{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 40%;
+    height: 400px;
+}
+
+#small-info{
+    font-size: 30px;
+    text-align: center;
+    width: 90%;
+}
+#small-info h3{
+    margin-bottom: 10px;
+}
+
+#small-info h3, #small-info p{
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+#small-info p{
+    font-weight:200;
+    font-size: 15px;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+#complete-info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    width: 90%;
+    background-color: white;
+}
+
+#complete-info h4{
+    font-size: 20px;
+}
+
+/* -------------------------FIN------------------------ */
+
+
+/* -------------------------Mosaico------------------------ */
+.container-pattern{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.container-content{
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+    width: 27%;
+    height: 303px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 7px black;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.containerinfo-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    height: 1000px;
+    width: 100%;
+    transition: 0.5s;
+    top:300px
+}
+
+.containerinfo-title{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    top: 12px;
+    width: 90%;
+}
+
+.container-content h4, .container-content h3{
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+}
+.container-content:hover .containerinfo-content{
+    cursor: pointer;
+    margin-top: -310px;
+    background-color: white;
+    color: #000000;
+}
+
+.container-describe{
+    position: relative;
+    top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+/* -------------------------FIN------------------------ */
+
+
+
+@media only screen and (max-width: 300px) {
+    #small-info h3{
+        font-size: 9px;
+    }
+    #small-info p{
+        font-size: 6px;
+    }
+    #complete-info h4{
+        font-size: 5px;
+    }
+    #complete-info{
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    #small-info p{
+        font-size: 9px;
+    }
+    #complete-info h4{
+        font-size: 7px;
+    }
+    h4{
+        font-size: 5px;
+    }
+    #login{
+        font-size: 100%; 
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    /* -------------------------Mosaico------------------------ */
+    .containerinfo-title{
+        top: 5px;
+    }
+    .containerinfo-content{
+        top:250px
+    }
+    
+    .container-content{
+        width: 280px;
+        height: 280px;
+    }
+
+    .container-content h4, .container-content h3, h3{
+        font-size: 18px;
+
+    }
+    .container-describe p{
+        font-size: 15px;
+        
+    }
+    .container-describe{
+        top: 5px;
+        margin: 3px;
+    }
+    .container-content:hover .containerinfo-content{
+        margin-top: -250px;
+    }
+    
+    /* -------------------------FIN------------------------ */
+}
+
+@media only screen and (min-width: 400px) {
+        #small-info p{
+            font-size: 12px;
+        }
+        #complete-info h4{
+            font-size: 10px;
+        }
+        h4{
+            font-size: 5px;
+        }
+        #login{
+            font-size: 100%; 
+        }
+        /* -------------------------Mosaico------------------------ */
+        .containerinfo-content{
+            top:170px
+        }
+        
+        .container-content{
+            width: 200px;
+            height: 200px;
+        }
+    
+        .container-content h4, .container-content h3, h3{
+            font-size: 12px;
+    
+        }
+        .container-describe p{
+            font-size: 10px;
+            
+        }
+        .container-describe{
+            top: 20px;
+        }
+        .container-content:hover .containerinfo-content{
+            margin-top: -175px;
+        }
+        
+        /* -------------------------FIN------------------------ */
+}
+
+@media only screen and (max-width: 600px) {
+
+    .bglogo{
+        max-width: 50px;
+        min-width: 50px;
+    }
+    /* Barra Busqueda */
+    .nav-bar{
+        padding-right: 5px;
+        margin-right: 5px;
+        height: 50px;
+    }
+    .search{ /* -> Texto Busqueda */
+        font-size: 8px;
+    }
+    #search-bar{ /* -> Input Navegacion */
+        border-left: white 2px solid;
+        font-size: 8px;
+        height: 60%;
+    }
+    
+    /* ------------------------FIN------------------------------- */
+    
+    #container-popular{
+        background-size: 1000px 100%;
+    }
+
+}
+
+@media only screen and (min-width: 500px) {
+
+}
+
+@media only screen and (min-width: 600px) {
+    #small-info p{
+        font-size: 14px;
+    }
+    #complete-info h4{
+        font-size: 13px;
+    }
+    h4{
+        font-size: 5px;
+    }
+    #login{
+        font-size: 100%; 
+    }
+
+    .containerinfo-content{
+        top:110px
+    }
+    
+    .container-content{
+        width: 200px;
+        height: 150px;
+    }
+
+    .container-content h4, .container-content h3, h3{
+        font-size: 12px;
+
+    }
+    .container-describe p{
+        font-size: 8px;
+        
+    }
+    .container-describe{
+        top: 20px;
+    }
+    .container-content:hover .containerinfo-content{
+        margin-top: -110px;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+
+    #small-info p{
+        font-size: 15px;
+    }
+    #complete-info h4{
+        font-size: 15px;
+    }
+
+    #login{
+        font-size: 100%; 
+    }
+
+    .containerinfo-content{
+        top:140px
+    }
+    
+    .container-content{
+        width: 300px;
+        height: 180px;
+    }
+
+    .container-content h4, .container-content h3, h3{
+        font-size: 15px;
+
+    }
+    .container-describe p{
+        font-size: 11px;
+        
+    }
+    .container-describe{
+        top: 20px;
+    }
+    .container-content:hover .containerinfo-content{
+        margin-top: -140px;
+    }
+} 
+
+@media only screen and (min-width: 800px) {
+
+    #small-info p{
+        font-size: 16px;
+    }
+    #complete-info h4{
+        font-size: 15px;
+    }
+
+    #login{
+        font-size: 100%; 
+    }
+
+    .containerinfo-content{
+        top:250px
+    }
+    
+    .container-content{
+        width: 350px;
+        height: 300px;
+    }
+
+    .container-content h4, .container-content h3, h3{
+        font-size: 25px;
+
+    }
+    .container-describe p{
+        font-size: 15px;
+    }
+    .container-content:hover .containerinfo-content{
+        margin-top: -250px;
+    }
+} 
+
+@media only screen and (min-width: 1000px) {
+    #container-popular{
+        background-size: 100% 100%;
+    }
+    #complete-info{
+        height: 50px;
+    }
+}   
+
+@media only screen and (min-width: 1100px) {
+
+    .containerinfo-content{
+        top:250px
+    }
+    
+    .container-content{
+        width: 350px;
+        height: 300px;
+    }
+
+    .container-content h4, .container-content h3, h3{
+        font-size: 20px;
+
+    }
+    .container-describe p{
+        font-size: 16px;
+    }
+    .container-describe{
+        top: 20px;
+    }
+    .container-content:hover .containerinfo-content{
+        margin-top: -250px;
+    }
+}   
