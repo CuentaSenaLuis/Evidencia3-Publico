@@ -83,12 +83,24 @@ select{
     transition: .2s;
 }
 
+#date{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+
 #date::-webkit-calendar-picker-indicator{
-    left: 75%;
+    opacity: 0.637;
+    padding-left: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 30px;
     height: 30px;
     pointer-events: auto;
     cursor: pointer;
+    z-index: 10;
 }
 
 #date:in-range::-webkit-datetime-edit-year-field, 
@@ -97,6 +109,17 @@ select{
 #date:in-range::-webkit-datetime-edit-text{
     color: transparent;
 }
+
+input[type="date"]::-webkit-datetime-edit {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.637);
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    right: 58px;
+    font-size: 20px;
+}
+
 
 .barBottom{
     position: absolute;

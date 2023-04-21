@@ -33,13 +33,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="txt_field">
-                    <select name="DocType" id="DocType">
+                <div class="txt_field" id="select">
+                    <select name="DocType" id="DocType" required>
                         <option value="null">Tipo Documento</option>
                         <option value="CC">Cedula</option>
                         <option value="TI">Tarjeta Identidad</option>
                         <option value="EX">Extranjera</option>
-                    </select>
+                    </select>          
                 </div>
                 <div class="txt_field">
                     <input type="text" class="text" required>
@@ -54,7 +54,7 @@
                     <label class="tlabel">Numero Celular</label>
                 </div>
                 <div class="txt_field">
-                    <select name="Sex" id="Sex">
+                    <select name="Sex" id="Sex" required>
                         <option value="null">Genero</option>
                         <option value="Male">Masculino</option>
                         <option value="Female">Femenino</option>
