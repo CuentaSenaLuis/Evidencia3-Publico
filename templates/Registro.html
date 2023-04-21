@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{data.Titulos}}</title>
+    <link rel="shortcut icon" href="../static/Hotelia.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{{ url_for('static', filename='./_css/Registro.css') }}">
@@ -33,15 +34,13 @@
                 </div>
             </div>
             <div class="row">
-                <div class="txt_field">
-                    <label class="olabel" id="doclabel">Tipo Documento</label>
-                    <span></span>
-                    <select name="DocType" id="DocType">
-                        <option value="null"></option>
+                <div class="txt_field" id="select">
+                    <select name="DocType" id="DocType" required>
+                        <option value="null">Tipo Documento</option>
                         <option value="CC">Cedula</option>
                         <option value="TI">Tarjeta Identidad</option>
                         <option value="EX">Extranjera</option>
-                    </select>
+                    </select>          
                 </div>
                 <div class="txt_field">
                     <input type="text" class="text" required>
@@ -56,21 +55,19 @@
                     <label class="tlabel">Numero Celular</label>
                 </div>
                 <div class="txt_field">
-                    <label class="olabel" id="genlabel">Genero</label>
-                    <span></span>
-                    <select name="Sex" id="Sex">
-                        <option value="null"></option>
+                    <select name="Sex" id="Sex" required>
+                        <option value="null">Genero</option>
                         <option value="Male">Masculino</option>
                         <option value="Female">Femenino</option>
-                        <option value="LGTB">Otro:</option>
+                        <option value="LGTB">Otro</option>
                     </select>
                 </div>
             </div>
             <div class="row">
                 <div class="txt_field">
-                    <label class="olabel" id="datelabel">Fecha Nacimiento</label>
-                    <span></span>
                     <input type="date" id="date" required>
+                    <span></span>
+                    <label>Fecha de nacimiento</label>
                 </div>
                 <div class="txt_field">
                     <input type="text" class="text" required>
@@ -80,9 +77,9 @@
             </div>
             <div class="row">
                 <div class="txt_field">
-                    <input type="text" class="text" required>
+                    <input type="email" class="text" required>
                     <span></span>
-                    <label class="tlabel">Correo Electronico</label>
+                    <label>Correo Electronico</label>
                 </div>
                 <div class="txt_field">
                     <input type="text" class="text" required>
