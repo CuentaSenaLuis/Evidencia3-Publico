@@ -31,15 +31,18 @@ p{
 }
 
 .title-container{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
     border-bottom: 2px grey solid;
 }
+.title-arrow{
+    position:relative;
+    right: 190px;
+}
 .material-symbols-outlined{
     font-size: 30px;
-    position: absolute;
-    top: 6.5%;
-    left: 29.5%;
     color: #16A6E4;
     font-weight: 900;
 }
@@ -65,16 +68,8 @@ form .txt_field{
 }
 
 select{
-    appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
     width: 200px;
     height: 50px;
-    background-color: red;
-}
-
-#date{
-    background-color: red;
 }
 
 .txt_field label{
@@ -89,14 +84,9 @@ select{
 }
 
 #date::-webkit-calendar-picker-indicator{
-    margin-left: -40px;
-    padding: 0;
-    border: 0;
-    width: 240px;
-    height: 50px;
-    position: absolute;
-    color:transparent;
-    opacity: 0;
+    left: 75%;
+    width: 30px;
+    height: 30px;
     pointer-events: auto;
     cursor: pointer;
 }
@@ -230,4 +220,14 @@ select{
     text-decoration: none;
     font-weight: 600;
     color: #16A6E4;
+}
+
+.txt_field select option{
+    color: rgba(0, 0, 0, 0.637);
+    font-size: 16px;
+}
+
+#DocType, #Sex{
+    color: rgba(0, 0, 0, 0.637);
+    font-size: 16px;
 }
