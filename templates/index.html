@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{data.Titulos}}</title>
+    <title>Hotelia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./_css/index.css') }}">
+    
 </head>
 <body>
-<<<<<<< Updated upstream
-    <h1>{{data.Bienvenida}}</h1>
-    <ul>
-        {% for i in data.Gatos %}
-        <li>{{i}}</li>
-        {%endfor%}
-    </ul>
-=======
     <div class="container-father">
 
 
@@ -27,15 +25,9 @@
                 <p class="search">BUSQUEDA</p>
                 <input type="text" name="search" id="search-bar">
             </div>
-            <!--
-            <div class="loginPersona">
+            <div class="login">
                 <a href="/Cuenta/Login" id="persona"><img src="../static/img/Persona.png" alt=""></a>
             </div>
-            -->
-            <div class="login">
-                <a href="/Cuenta/Login" id="login">Iniciar Sesion</a>
-            </div>
-
         </div>
 
 
@@ -43,7 +35,7 @@
         <div class="container-total">
 
             <div id="container-popular">
-                <!--<img src="../static/img/backdrop.jpg" alt="poupularBackground">-->
+
                 <div id="container-descrippop">
                     <div id="small-info">
                         <h3>Nombre Hotel</h3>
@@ -66,8 +58,8 @@
 
 
             <div class="container-pattern">
-                <div class="container-content" style="background-image: url('../static/img/3.jpg');">
-                    <div class="containerinfo-content">
+                <div class="container-content" style="background-image: url(../static/img/3.jpg);">
+                    <div class="containerinfo-content" >
                         <div class="containerinfo-title">
                             <div class="title">
                             <h4>Nombre Hotel</h4>
@@ -89,8 +81,8 @@
                     </div>
                 </div>
 
-                <div class="container-content" style="background-image: url('../static/img/4.jpg');">
-                    <div class="containerinfo-content">
+                <div class="container-content" style="background-image: url(../static/img/4.jpg);">
+                    <div class="containerinfo-content" >
                         <div class="containerinfo-title">
                             <div class="title">
                             <h4>Nombre Hotel</h4>
@@ -112,8 +104,8 @@
                     </div>
                 </div>
 
-                <div class="container-content" style="background-image: url('../static/img/5.jpg');">
-                    <div class="containerinfo-content">
+                <div class="container-content" style="background-image: url(../static/img/2.jpg);">
+                    <div class="containerinfo-content" >
                         <div class="containerinfo-title">
                             <div class="title">
                             <h4>Nombre Hotel</h4>
@@ -135,8 +127,8 @@
                     </div>
                 </div>
 
-                <div class="container-content" style="background-image: url('../static/img/6.jpg');">
-                    <div class="containerinfo-content">
+                <div class="container-content" style="background-image: url(../static/img/6.jpg);">
+                    <div class="containerinfo-content" >
                         <div class="containerinfo-title">
                             <div class="title">
                             <h4>Nombre Hotel</h4>
@@ -158,12 +150,13 @@
                     </div>
                 </div>
 
-                <div class="container-content" style="background-image: url('../static/img/7.jpg');">
-                    <div class="containerinfo-content">
+                <div class="container-content" style="background-image: url(../static/img/7.jpg);">
+                    <div class="containerinfo-content" >
                         <div class="containerinfo-title">
                             <div class="title">
                             <h4>Nombre Hotel</h4>
                             </div>
+                            <span id="bar-content"></span>
                             <div class="title">
                             <h3>Estrellitas</h3>
                             </div>
@@ -180,8 +173,8 @@
                     </div>
                 </div>
 
-                <div class="container-content" style="background-image: url('../static/img/8.jpg');">
-                    <div class="containerinfo-content">
+                <div class="container-content" style="background-image: url(../static/img/8.jpg);">
+                    <div class="containerinfo-content" >
                         <div class="containerinfo-title">
                             <div class="title">
                             <h4>Nombre Hotel</h4>
@@ -218,6 +211,5 @@
     
     
     </div>
->>>>>>> Stashed changes
 </body>
 </html>
