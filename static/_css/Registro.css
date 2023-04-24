@@ -100,8 +100,8 @@ select{
     padding-left: 200px;
     padding-top: 20px;
     padding-bottom: 20px;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     pointer-events: auto;
     cursor: pointer;
     z-index: 10;
@@ -119,8 +119,9 @@ input[type="date"]::-webkit-datetime-edit {
     padding: 0px;
     margin: 0px;
     position: absolute;
-    right: 58px;
-    font-size: 20px;
+    top: 45%;
+    right: 40px;
+    font-size: 16px;
 }
 
 
@@ -259,8 +260,10 @@ input[type="date"]::-webkit-datetime-edit {
 }
 
 #DocType option:checked{
-    background-color: greenyellow;
+    background-color: #16A6E4;
+    color: white;
 }
 #Sex option:checked{
-    background-color: greenyellow;
+    background-color: #16A6E4;
+    color: white;
 }
