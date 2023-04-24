@@ -1,23 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
 body{
-    margin: 0;
     background-image: url("../img/fondo-login.jpg");
     background-size: cover;
     background-attachment: fixed;
 }
 
-*{
-    box-sizing: border-box;
+.fatherContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20vw;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.1s;
 }
 
-.contenedor{
-    padding: 15px;
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.637);
+    border-radius: 10px;
+    margin: 0px;
+    padding: 10px;
+    height: 50vh;
+    width: 100%;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .material-symbols-outlined{
     font-size: 30px;
-    position: absolute;
-    top: 27px;
-    left: 40px;
+    margin-bottom: 10px;
+    margin-right: 10px;
     color: #16A6E4;
     font-weight: 900;
 }
@@ -31,7 +58,6 @@ body{
 
 h1{
     font-size: 35px;
-    margin-bottom: 10px;
     text-align: center;
     color: #16A6E4;
 }
@@ -48,50 +74,28 @@ p{
     color: #16A6E4;
 }
 
-.check{
-    position: absolute;
-    left: 35px;
-}
+.contenedor{
+    width: 100%;
 
-@media(min-width:768px)
-{
-    .formulario{
-        margin: auto;
-        width: 400px;
-        height: 370px;
-        margin-top: 120px;
-        border-radius: 20px;
-    }
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
 }
 
 /*transición correo y contraseña*/
 
-.center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-
-.center form{
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
-form .txt_field{
+.txt_field{
     position: relative;
-    margin-bottom: 20px;
-    margin-left: 15px;
+
 }
 
 .txt_field input{
-    width: 95%;
-    padding-left: 40px;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     height: 50px;
+    width: 100%;
     font-size: 16px;
     border: none;
     background: rgba(14, 124, 171, 0.7);
@@ -107,7 +111,7 @@ form .txt_field{
     transform: translateY(-50%);
     font-size: 16px;
     pointer-events: none;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .txt_field input:focus ~ label,
@@ -122,13 +126,16 @@ form .txt_field{
 }
 
 button{
-    position: relative;
-    width: 91%;
+    margin-top: 5px;
+    margin-bottom: 5px;
     height: 50px;
-    left: 15px;
     border-radius: 8px;
     border: none;
     background: rgba(141, 141, 141, 0.7);
     color: white;
     font-size: 16px;
+}
+
+button:hover{
+    background: rgba(141, 141, 141, 0.9);
 }

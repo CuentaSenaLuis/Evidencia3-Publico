@@ -10,12 +10,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='./_css/Login.css') }}">
 </head>
 <body>
+    <div class="fatherContainer">
     <form class="center">
+        <div class="title">
         <a href="/"><span class="material-symbols-outlined">
             arrow_back
         </span>
         </a>
         <h1>Ingresar</h1>
+        </div>
         <div class="contenedor">
             <div class="txt_field">
                 <i class="fas fa-envelope icon" id="icon"></i>
@@ -33,5 +36,6 @@
         </div>
         <p>¿No tienes cuenta? <a class="link" href="/Cuenta/Registro">Regístrate</a></p>
     </form>
+    </div>
 </body>
 </html>
