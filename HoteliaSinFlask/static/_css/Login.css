@@ -16,7 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     padding: 20vw;
     height: 100vh;
     width: 100vw;
@@ -32,11 +32,13 @@ body{
     border-radius: 10px;
     margin: 0px;
     padding: 10px;
-    height: 80vh;
     width: 100%;
+    height: 80vh;
+    
 }
 
 .title{
+    margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -58,7 +60,7 @@ h1{
 }
 
 p{
-    margin-top: 0;
+    margin: 10px;
     text-align: center;
 }
 
@@ -70,28 +72,32 @@ p{
 }
 
 .contenedor{
+    margin: 2px;
     width: 100%;
-
-    padding: 15px;
+    height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: space-between;
+    justify-content: space-around;
+    align-items: space-evenly;
 }
 
 /*transición correo y contraseña*/
 
-.txt_field{
+.txt_field, .txt_field-correct{
     position: relative;
-    background: rgba(14, 124, 171, 0.7);
     border-radius: 5px;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    min-height: 50px;
+    margin: 2px;
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: baseline;
+    background: rgba(14, 124, 171, 0.7);
+
+}
+
+.txt_field-correct{
+    background: rgba(14, 171, 82, 0.7);
 }
 
 #icon{
@@ -100,7 +106,7 @@ p{
 }
 
 
-.txt_field input{
+#txtcorreo input, #txtpassword input{
     margin-left: 10px;
     height: 100%;
     width: 100%;
@@ -110,7 +116,7 @@ p{
     outline: none;
 }
 
-.txt_field label{
+#txtcorreo label, #txtpassword label{
     position: absolute;
     top: 50%;
     left: 35px;
@@ -119,7 +125,7 @@ p{
     font-weight: bold;
     pointer-events: none;
     opacity: 0.555;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 
@@ -143,3 +149,48 @@ button{
 button:hover{
     background: rgba(141, 141, 141, 0.9);
 }
+
+@media only screen and (max-width: 340px) {
+    .txt_field label{
+        font-size: 12px;
+    }
+    
+    .txt_field-up{
+        margin-top: -35px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .txt_field input{
+        font-size: 12px;
+    }
+    
+    .txt_field-up{
+        margin-top: -35px;
+    }
+}  
+
+@media only screen and (max-width: 900px) {
+    .center{
+        max-width: 400px;
+        max-height: 300px;
+    }
+    .txt_field-up{
+        margin-top: -33px;
+    }
+}  
+
+@media only screen and (min-width: 900px) {
+    .center{
+        max-width: 400px;
+    }
+    .txt_field-up{
+        margin-top: -33px;
+    }
+}   

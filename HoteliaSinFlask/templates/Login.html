@@ -8,32 +8,35 @@
     <link rel="shortcut icon" href="../static/Hotelia.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="../static/_css/Login.css">
+    <link rel="stylesheet" href="../static/_css/login.css">
 </head>
 <body>
     <div class="fatherContainer">
         <form class="center" id="formulario">
             <div class="title">
-            <a href="/"><span class="material-symbols-outlined">
+            <a href="../templates/index.html"><span class="material-symbols-outlined">
                 arrow_back
             </span>
             </a>
             <h1>Ingresar</h1>
             </div>
             <div class="contenedor">
-                <div class="txt_field">
+                <br>
+                <div class="txt_field" id="txtcorreo">
                     <i class="fas fa-envelope icon" id="icon"></i>
                     <input type="email" name="correo" required>
                     <label id="lblcorreo">Correo Electrónico</label>
                 </div>
-                <div class="txt_field">
+                <br>
+                <div class="txt_field" id="txtpassword">
                     <i class="fas fa-key icon" id="icon"></i>
-                    <input type="password" required>
-                    <label>Contraseña</label>
+                    <input type="password" name="password" required>
+                    <label id="lblpassword">Contraseña</label>
                 </div>
+                <br>
                 <button type="submit">Ingresar</button>
             </div>
-            <p>¿No tienes cuenta? <a class="link" href="/Cuenta/Registro">Regístrate</a></p>
+            <p>¿No tienes cuenta? <a class="link" href="../templates/registro.html">Regístrate</a></p>
         </form>
     </div>
     <script src="../static/_js/login.js"></script>
