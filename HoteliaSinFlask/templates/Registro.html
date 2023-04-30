@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../static/_css/registro.css">
 </head>
 <body>
+<div class="father-class">
     <div id="form-container">
         <form action="">
             <div class="title-container">
@@ -99,18 +100,19 @@
                     <label class="tlabel">Confirmar Contraseña</label>
                 </div>
             </div>
-        <div id="footer-container">    
-            
-            <label class="container">
-                <input type="checkbox" >
-                <div class="checkmark"></div>
-            </label>
-            <label id="checkbox-title">Al registrarte, aceptas nuestras condiciones de uso y Política de privacidad.</label>
+        <div id="footer-container">
+            <div class="container-check">             
+                <label class="container">
+                    <input id="checkbox1" type="checkbox" >
+                    <div class="checkmark"></div>
+                </label>
+                <label id="checkbox-title">Al registrarte, aceptas nuestras condiciones de uso y Política de privacidad.</label>
+            </div>
             <input type="submit" id="submit">
-            <p>¿Ya tienes cuenta? <a class="link" href="login">Iniciar Sesión</a></p>
+            <p id="login">¿Ya tienes cuenta? <a class="link" href="login">Iniciar Sesión</a></p>
         </div>
         </form>
     </div>
-
+</div>
 </body>
 </html>

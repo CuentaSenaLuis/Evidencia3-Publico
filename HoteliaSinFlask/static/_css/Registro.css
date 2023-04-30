@@ -7,27 +7,30 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    overflow: hidden;
 }
 
-h1{
-    padding: 10px;
+.father-class{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-p{
-    position: relative;
-    top: 40px;
-    text-align: center;
-}
 
 #form-container{
-    width: 600px;
-    height: 710px;
     border-radius: 5%;
     border: 2px grey solid;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    overflow: hidden;
+    margin: 20px;
+    overflow-y: auto;
+}
+
+#form-container::-webkit-scrollbar{
+    opacity: 0;
+    width: 0px;
+    height: 0px;
 }
 
 .title-container{
@@ -53,13 +56,17 @@ p{
 }
 
 form .txt_field{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
     position: relative;
     margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-bottom: 3px solid grey;
 }
 
-.txt_field input, select{
-    width: 200px;
+.txt_field input, .txt_field select{
     height: 50px;
     margin-top: 7px;
     border-radius: 10px;
@@ -76,7 +83,6 @@ select{
     position: absolute;
     color: rgba(0, 0, 0, 0.637);
     transform: translateY(-50%);
-    font-size: 16px;
     top: 55%;
     left: 0px;
     pointer-events: none;
@@ -84,7 +90,6 @@ select{
 }
 
 .txt_field input{
-    font-size: 20px;
     opacity: 0.637;
 }
 
@@ -121,7 +126,6 @@ input[type="date"]::-webkit-datetime-edit {
     position: absolute;
     top: 45%;
     right: 40px;
-    font-size: 16px;
 }
 
 
@@ -159,16 +163,30 @@ input[type="date"]::-webkit-datetime-edit {
     width: 100%;
 }
 
+#footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
 #footer-container #submit{
-    position: relative;
     width: 33%;
     height: 50px;
-    top: 20px;
-    left: 190px;
+    margin: 10px;
     font-size: 16px;
     background: #16A6E4;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.container-check{
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
 }
 
 .container input {
@@ -183,6 +201,9 @@ input[type="date"]::-webkit-datetime-edit {
 .container {
     display: inline-block;
     position: relative;
+    width: 12px;
+    margin:5px;
+    margin-left: 20px;
     cursor: pointer;
     font-size: 20px;
     user-select: none;
@@ -193,13 +214,13 @@ input[type="date"]::-webkit-datetime-edit {
     position: relative;
     top: 0;
     left: 0;
-    margin-left: 75px;
+    padding: 0px;
     height: 12px;
     width: 12px;
-    background-color: #ccc;
+    background-color: #8d8d8d88;
     border-radius: 5%;
 }
-   
+
 .container input:checked ~ .checkmark {
     box-shadow: 1px 1px 0px rgb(183, 183, 183);
     transition: all 0.2s;
@@ -239,7 +260,9 @@ input[type="date"]::-webkit-datetime-edit {
 }
 
 #checkbox-title{
+    text-align: justify;
     font-size: 13px;
+    margin-right: 20px;
 }
 
 .link{
@@ -251,12 +274,10 @@ input[type="date"]::-webkit-datetime-edit {
 
 .txt_field select option{
     color: rgba(0, 0, 0, 0.637);
-    font-size: 16px;
 }
 
 #DocType, #Sex{
     color: rgba(0, 0, 0, 0.637);
-    font-size: 16px;
 }
 
 #DocType option:checked{
@@ -266,4 +287,59 @@ input[type="date"]::-webkit-datetime-edit {
 #Sex option:checked{
     background-color: #16A6E4;
     color: white;
+}
+#login{
+    margin-bottom: 10px;
+}
+.txt_field input, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel{
+    transition: 0.2s;
+}
+
+@media only screen and (min-width: 501px) {
+    .text, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel{
+        width: 200px;
+        font-size: 16px;
+    }
+    #date::-webkit-calendar-picker-indicator{
+        padding-left: 175px;
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .text, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel{
+        width: 150px;
+        font-size: 12px;
+    }
+    #date::-webkit-calendar-picker-indicator{
+        padding-left: 125px;
+        width: 18.7px;
+        height: 18.7px;
+    }
+    .txt_field input, .txt_field select{
+        height: 37.5px;
+    }
+    .txt_field span::before{
+        top: 45px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .text, .txt_field select, .txt_field label, #DocType, #Sex, .tlabel{
+        width: 100px;
+        font-size: 8px;
+    }
+    #date::-webkit-calendar-picker-indicator{
+        padding-left: 75px;
+        width: 12.5px;
+        height: 12.5px;
+    }
+    .txt_field input, .txt_field select{
+        height: 25px;
+    }
+    .txt_field span::before{
+        top: 32px;
+    }
 }
